@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <center><h1 class="texto-degradado">TIENDA YOUSHOES</h1>
+    <form>
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" placeholder="Ingresa tu usuario"><br>
+    
+        <br><label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password"><br>
+        <br><button type="button" onclick="window.location.href='comprayventa.html'">Iniciar</button>
+        
+    </form></center>
+    <video class="background-video" autoplay loop muted>
+        <source src="fondo.mp4" type="video/mp4">
+        
+    </video>
+    <script>
+        document.getElementById('username').value = 'usuario123';
+        document.getElementById('password').value = 'contraseña123';
+    </script>
+</html>
+

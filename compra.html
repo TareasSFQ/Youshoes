@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Zapatos</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body{
+        color: white;
+    }
+</style>
+<body>
+    <video class="background-video" autoplay loop muted>
+        <source src="fondo.mp4" type="video/mp4">
+        
+    </video>
+    <h1>Bienvenido a la Tienda de Zapatos</h1>
+    <div class="carrito" id="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="lista-carrito">
+        </ul>
+        <p>Total: $<span id="total">0.00</span></p>
+        <button id="vaciar-carrito">Vaciar Carrito</button>
+       <button id="pagar">Pagar</button>
+       <div id="mensaje-pago" style="display: none;">
+        <h2>Pago realizado con éxito</h2>
+        <p id="monto-pagado"></p>
+    </div>
+    
+    </div>
+    <div class="producto">
+        <img src="nike40.jpeg" alt="Zapato 1">
+        <h3>Nike Pegasus 40</h3>
+        <p>Precio: $50.00</p>
+        <p><strong>Tipo:</strong> Running (diario)</p>
+        <p><strong>Material:</strong> Mesh técnico</p>
+        <p><strong>Suela:</strong> Goma flexible</p>
+        <p><strong>Tecnología:</strong> React + Zoom Air</p>
+        <div class="tallas">
+            <label for="talla1">Talla:</label>
+            <select id="talla1">
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                
+            </select>
+        </div>
+        <div class="cantidad">
+            <label for="cantidad1">Cantidad:</label>
+            <select id="cantidad1">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <p><strong>Inventario disponible:</strong> <span class="inventario" data-inventario="10">10</span></p>
+            </select>
+        </div>
+        <button class="boton-comprar">Añadir al carrito</button>
+    </div>
+    <div class="producto">
+        <img src="NIKE REVOLUTION 6 NEXT NATURE.png" alt="Zapato 2">
+        <h3>NIKE REVOLUTION 6 NEXT NATURE</h3>
+        <p>Precio: $80.00</p>
+        
+      <p><strong>Tipo:</strong> Running / Casual</p>
+      <p><strong>Material:</strong> Malla reciclada + sintético</p>
+      <p><strong>Suela:</strong> Goma con patrón de tracción</p>
+      <p><strong>Tecnología:</strong> Espuma suave, diseño sostenible</p>
+        <div class="tallas">
+            <label for="talla1">Talla:</label>
+            <select id="talla1">
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                
+            </select>
+            <img src="" alt="" srcset="">
+        </div>
+        <div class="cantidad">
+            <label for="cantidad2">Cantidad:</label>
+            <select id="cantidad2">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <p><strong>Inventario disponible:</strong> <span class="inventario" data-inventario="10">10</span></p>
+            </select>
+        </div>
+        <button class="boton-comprar">Añadir al carrito</button>
+    </div>
+    <div class="producto">
+        <img src="coverse chuck.jpeg" alt="Zapato 3">
+        <h3>Zapatos CONVERSE</h3>
+        <p>Precio: $25.00</p>
+        <h2>Chuck Taylor All Star High</h2>
+        <p><strong>Tipo:</strong> Casual / Urbano</p>
+        <p><strong>Material:</strong> Lona</p>
+        <p><strong>Suela:</strong> Goma vulcanizada</p>
+        <p><strong>Corte:</strong> Alto (High)</p>
+        <p><strong>Colores:</strong> Negro, Blanco, Rojo</p>
+        <div class="tallas">
+            <label for="talla1">Talla:</label>
+            <select id="talla1">
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                
+            </select>
+        </div>
+        <div class="cantidad">
+            <label for="cantidad2">Cantidad:</label>
+            <select id="cantidad2">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <p><strong>Inventario disponible:</strong> <span class="inventario" data-inventario="10">10</span></p>
+            </select>
+        </div>
+        <button class="boton-comprar">Añadir al carrito</button>
+    </div>
+    <div class="producto">
+        <img src="ultrarange.jpeg" alt="Zapato 4">
+        <h3>Zapatos VANS</h3>
+        <p>Precio: $100.00</p>
+        <h2>Vans UltraRange EXO</h2>
+        <p><strong>Tipo:</strong> Outdoor</p>
+        <p><strong>Material:</strong> Malla y sintético</p>
+        <p><strong>Suela:</strong> UltraCush Lite</p>
+        <div class="tallas">
+            <label for="talla1">Talla:</label>
+            <select id="talla1">
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                
+            </select>
+            <p></p>
+        </div>
+        <div class="cantidad">
+            <label for="cantidad2">Cantidad:</label>
+            <select id="cantidad2">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <p><strong>Inventario disponible:</strong> <span class="inventario" data-inventario="10">10</span></p>
+            </select>
+        </div>
+        <button class="boton-comprar">Añadir al carrito</button>
+    </div>
+    <div class="producto">
+        <img src="coverse all.jpg" alt="Zapato 5">
+        <h3>Zapatos CONVERSE </h3>
+        <p>Precio: $125.00</p>
+        <h2>Chuck Taylor All Star Lift</h2>
+        <p><strong>Tipo:</strong> Casual / Plataforma</p>
+        <p><strong>Material:</strong> Lona</p>
+        <p><strong>Suela:</strong> Goma con plataforma</p>
+        <p><strong>Corte:</strong> Bajo o Alto</p>
+        <p><strong>Colores:</strong> Blanco, Rosa, Negro</p>
+        <div class="tallas">
+            <label for="talla1">Talla:</label>
+            <select id="talla1">
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                
+            </select>
+        </div>
+        <div class="cantidad">
+            <label for="cantidad2">Cantidad:</label>
+            <select id="cantidad2">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <p><strong>Inventario disponible:</strong> <span class="inventario" data-inventario="10">10</span></p>
+            </select>
+        </div>
+        <button class="boton-comprar">Añadir al carrito</button>
+    </div>
+    <div class="producto">
+        <img src="adidastan.jpeg" alt="Zapato 6">
+        <h3>Zapatos ADIDAS </h3>
+        <p>Precio: $130.00</p>
+        <h2>Adidas Stan Smith</h2>
+        <p><strong>Tipo:</strong> Casual / Urbano</p>
+        <p><strong>Material:</strong> Cuero</p>
+        <p><strong>Suela:</strong> Goma</p>
+        <p><strong>Tallas:</strong> 36 al 47 EU</p>
+        <div class="tallas">
+            <label for="talla1">Talla:</label>
+            <select id="talla1">
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                
+            </select>
+
+        </div>
+        <div class="cantidad">
+            <label for="cantidad2">Cantidad:</label>
+            <select id="cantidad2">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <p><strong>Inventario disponible:</strong> <span class="inventario" data-inventario="10">10</span></p>
+            </select>
+        </div>
+        <button class="boton-comprar">Añadir al carrito</button>
+    </div>
+    <div class="producto">
+        <img src="nikeairforce.jpg" alt="Zapato 7">
+        <h3>Zapatos NIKE </h3>
+        <p>Precio: $130.00</p>
+        <h2>Nike Air Force 1 '07</h2>
+        <p><strong>Tipo:</strong> Urbano / Casual</p>
+        <p><strong>Material:</strong> Cuero genuino</p>
+        <p><strong>Suela:</strong> Goma con patrón circular</p>
+        <p><strong>Tecnología:</strong> Air-Sole en talón</p>
+        <div class="tallas">
+            <label for="talla1">Talla:</label>
+            <select id="talla1">
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                
+            </select>
+        </div>
+        <div class="cantidad">
+            <label for="cantidad2">Cantidad:</label>
+            <select id="cantidad2">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <p><strong>Inventario disponible:</strong> <span class="inventario" data-inventario="10">10</span></p>
+            </select>
+        </div>
+        <button class="boton-comprar">Añadir al carrito</button>
+    </div>
+    <div class="producto">
+        <img src="puma mens.jpeg" alt="Zapato 8">
+        <h3>Zapatos PUMA </h3>
+        <p>Precio: $130.00</p>
+        <h2>Puma RS-X</h2>
+        <p><strong>Tipo:</strong> Running / Deportivo</p>
+        <p><strong>Material:</strong> Malla, cuero, sintético</p>
+        <p><strong>Suela:</strong> EVA con amortiguación RS-X</p>
+        <p><strong>Tallas:</strong> 35 al 42 EU</p>
+        <div class="tallas">
+            <label for="talla1">Talla:</label>
+            <select id="talla1">
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                
+            </select>
+        </div>
+        <div class="cantidad">
+            <label for="cantidad2">Cantidad:</label>
+            <select id="cantidad2">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <p><strong>Inventario disponible:</strong> <span class="inventario" data-inventario="10">10</span></p>
+            </select>
+        </div>
+        <button class="boton-comprar">Añadir al carrito</button>
+    </div>
+    <div class="producto">
+        <img src="converse star.jpeg" alt="Zapato 9">
+        <h3>Zapatos CONVERSE </h3>
+        <p>Precio: $130.00</p>
+        <h2>Converse Run Star Hike</h2>
+        <p><strong>Tipo:</strong> Street Style</p>
+        <p><strong>Material:</strong> Lona o cuero sintético</p>
+        <p><strong>Suela:</strong> Plataforma dentada</p>
+        <p><strong>Corte:</strong> Alto (High)</p>
+        <p><strong>Colores:</strong> Negro, Blanco, Estampados</p>
+        <div class="tallas">
+            <label for="talla1">Talla:</label>
+            <select id="talla1">
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                
+            </select>
+        </div>
+        <div class="cantidad">
+            <label for="cantidad2">Cantidad:</label>
+            <select id="cantidad2">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <p><strong>Inventario disponible:</strong> <span class="inventario" data-inventario="10">10</span></p>
+            </select>
+        </div>
+        <button class="boton-comprar">Añadir al carrito</button>
+    </div>
+    <div class="producto">
+        <img src="coverse pro.jpeg" alt="Zapato 10">
+        <h3>Zapatos COVERSES </h3>
+        <p>Precio: $130.00</p>
+        <h2>Converse Pro Leather</h2>
+        <p><strong>Tipo:</strong> Casual / Básquet Retro</p>
+        <p><strong>Material:</strong> Cuero</p>
+        <p><strong>Suela:</strong> Goma cupsole</p>
+        <p><strong>Corte:</strong> Alto o Bajo</p>
+        <p><strong>Colores:</strong> Blanco, Rojo, Azul</p>
+        <div class="tallas">
+            <label for="talla1">Talla:</label>
+            <select id="talla1">
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                
+            </select>
+        </div>
+        <div class="cantidad">
+            <label for="cantidad2">Cantidad:</label>
+            <select id="cantidad2">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <p><strong>Inventario disponible:</strong> <span class="inventario" data-inventario="10">10</span></p>
+            </select>
+        </div>
+        <button class="boton-comprar">Añadir al carrito</button>
+    </div>
+    <div class="producto">
+        <img src="pumasuede.jpeg" alt="Zapato 12">
+        <h3>Zapatos PUMA </h3>
+        <p>Precio: $130.00</p>
+        <h2>Puma Suede Classic</h2>
+        <p><strong>Tipo:</strong> Casual / Urbano</p>
+        <p><strong>Material:</strong> Gamuzón</p>
+        <p><strong>Suela:</strong> Goma vulcanizada</p>
+        <p><strong>Tallas:</strong> 35 al 42 EU</p>
+        <div class="tallas">
+            <label for="talla1">Talla:</label>
+            <select id="talla1">
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                
+            </select>
+        </div>
+        <div class="cantidad">
+            <label for="cantidad2">Cantidad:</label>
+            <select id="cantidad2">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <p><strong>Inventario disponible:</strong> <span class="inventario" data-inventario="10">10</span></p>
+            </select>
+        </div>
+        <button class="boton-comprar">Añadir al carrito</button>
+    </div>
+    <div class="producto">
+        <img src="adidastar.jpeg" alt="Zapato 13">
+        <h3>Zapatos ADIDAS </h3>
+        <p>Precio: $130.00</p>
+        <h2>Adidas Superstar</h2>
+        <p><strong>Tipo:</strong> Urbano / Casual</p>
+        <p><strong>Material:</strong> Cuero</p>
+        <p><strong>Suela:</strong> Goma vulcanizada</p>
+        <p><strong>Tallas:</strong> 35 al 42 EU</p>
+        <div class="tallas">
+            <label for="talla1">Talla:</label>
+            <select id="talla1">
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                
+            </select>
+        </div>
+        <div class="cantidad">
+            <label for="cantidad2">Cantidad:</label>
+            <select id="cantidad2">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <p><strong>Inventario disponible:</strong> <span class="inventario" data-inventario="10">10</span></p>
+            </select>
+        </div>
+        <button class="boton-comprar">Añadir al carrito</button>
+    </div>
+    <div class="producto">
+        <img src="Adidas-Ultra-Boost-2016-6.jpg" alt="Zapato 14">
+        <h3>Zapatos ADIDAS </h3>
+        <p>Precio: $130.00</p>
+        <h2>Adidas Ultra Boost</h2>
+        <p><strong>Tipo:</strong> Running / Casual</p>
+        <p><strong>Material:</strong> Primeknit</p>
+        <p><strong>Suela:</strong> Boost™</p>
+        <p><strong>Tallas:</strong> 35 al 42 EU</p>
+        <div class="tallas">
+            <label for="talla1">Talla:</label>
+            <select id="talla1">
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                
+            </select>
+        </div>
+        <div class="cantidad">
+            <label for="cantidad2">Cantidad:</label>
+            <select id="cantidad2">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <p><strong>Inventario disponible:</strong> <span class="inventario" data-inventario="10">10</span></p>
+            </select>
+        </div>
+        <button class="boton-comprar">Añadir al carrito</button>
+    </div>
+    <div class="producto">
+        <img src="nike270.jpg" alt="Zapato 15">
+        <h3>Zapatos NIKE </h3>
+        <p>Precio: $130.00</p>
+        <h2>Nike Air Max 270</h2>
+        <p><strong>Tipo:</strong> Running / Lifestyle</p>
+        <p><strong>Material:</strong> Malla transpirable</p>
+        <p><strong>Suela:</strong> Espuma + Air Max 270º</p>
+        <p><strong>Tecnología:</strong> Max Air</p>
+        <div class="tallas">
+            <label for="talla1">Talla:</label>
+            <select id="talla1">
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                
+            </select>
+        </div>
+        <div class="cantidad">
+            <label for="cantidad2">Cantidad:</label>
+            <select id="cantidad2">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <p><strong>Inventario disponible:</strong> <span class="inventario" data-inventario="10">10</span></p>
+            </select>
+        </div>
+        <button class="boton-comprar">Añadir al carrito</button>
+    </div>
+   
+    <div class="producto">
+        <img src="puma cali.jpeg" alt="Zapato 17">
+        <h3>Zapatos Puma </h3>
+        <p>Precio: $130.00</p>
+        <h2>Puma Cali</h2>
+        <p><strong>Tipo:</strong> Casual / Urbano</p>
+        <p><strong>Material:</strong> Cuero</p>
+        <p><strong>Suela:</strong> Goma</p>
+        <p><strong>Tallas:</strong> 36 al 46 EU</p>
+        <div class="tallas">
+            <label for="talla1">Talla:</label>
+            <select id="talla1">
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                
+            </select>
+        </div>
+        <div class="cantidad">
+            <label for="cantidad2">Cantidad:</label>
+            <select id="cantidad2">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            <p><strong>Inventario disponible:</strong> <span class="inventario" data-inventario="10">10</span></p>
+            </select>
+        </div>
+        <button class="boton-comprar">Añadir al carrito</button>
+    </div>
+   
+    <div class="producto">
+        <img src="sk8.jpeg" alt="Zapato 19">
+        <h3>Zapatos VANS </h3>
+        <p>Precio: $130.00</p>
+        <h2>Vans Sk8-Hi</h2>
+        <p><strong>Tipo:</strong> Skate / Urbano</p>
+        <p><strong>Material:</strong> Gamuza y lona</p>
+        <p><strong>Suela:</strong> Goma waffle</p>
+        <div class="tallas">
+            <label for="talla1">Talla:</label>
+            <select id="talla1">
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                
+            </select>
+        </div>
+        <div class="cantidad">
+            <label for="cantidad2">Cantidad:</label>
+            <select id="cantidad2">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <p><strong>Inventario disponible:</strong> <span class="inventario" data-inventario="10">10</span></p>
+            </select>
+        </div>
+        <button class="boton-comprar">Añadir al carrito</button>
+    </div>
+    <div class="producto">
+        <img src="vansold.jpg" alt="Zapato 20">
+        <h3>Zapatos VANS </h3>
+        <p>Precio: $130.00</p>
+        <h2>Vans Old Skool</h2>
+      <p><strong>Tipo:</strong> Casual / Skate</p>
+      <p><strong>Material:</strong> Lona y gamuza</p>
+      <p><strong>Suela:</strong> Goma waffle</p>
+        <div class="tallas">
+            <label for="talla1">Talla:</label>
+            <select id="talla1">
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                
+            </select>
+        </div>
+        <div class="cantidad">
+            <label for="cantidad2">Cantidad:</label>
+            <select id="cantidad2">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <p><strong>Inventario disponible:</strong> <span class="inventario" data-inventario="10">10</span></p>
+            </select>
+        </div>
+        <button class="boton-comprar">Añadir al carrito</button>
+    </div>
+    
+</body>
+
+</html>
+
+<script>
+    const carrito = [];
+    const totalElement = document.getElementById('total');
+    const listaCarrito = document.getElementById('lista-carrito');
+
+    document.querySelectorAll('.boton-comprar').forEach(button => {
+        button.addEventListener('click', function() {
+            const producto = this.closest('.producto');
+            const nombre = producto.querySelector('h3').textContent;
+            const precio = parseFloat(producto.querySelector('p').textContent.replace('Precio: $', ''));
+            const cantidadSeleccionada = parseInt(producto.querySelector('.cantidad select').value);
+
+            carrito.push({ nombre, precio, cantidad: cantidadSeleccionada });
+            actualizarCarrito();
+        });
+    });
+
+    function actualizarCarrito() {
+        listaCarrito.innerHTML = '';
+        let total = 0;
+
+        carrito.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = `${item.nombre} - $${item.precio} x ${item.cantidad}`;
+            listaCarrito.appendChild(li);
+            total += item.precio * item.cantidad;
+        });
+
+        totalElement.textContent = total.toFixed(2);
+    }
+
+    document.getElementById('vaciar-carrito').addEventListener('click', function() {
+        carrito.length = 0; // Vaciar el carrito
+        actualizarCarrito();
+    });
+</script>
+<script>
+    document.querySelectorAll('.boton-comprar').forEach(button => {
+        button.addEventListener('click', function() {
+            const producto = this.closest('.producto');
+            const cantidadSeleccionada = parseInt(producto.querySelector('.cantidad select').value);
+            const inventarioElemento = producto.querySelector('.inventario');
+            let inventarioActual = parseInt(inventarioElemento.dataset.inventario);
+
+            if (cantidadSeleccionada <= inventarioActual) {
+                inventarioActual -= cantidadSeleccionada;
+                inventarioElemento.dataset.inventario = inventarioActual;
+                inventarioElemento.textContent = inventarioActual;
+                alert('Producto añadido al carrito.');
+            } else {
+                alert('No hay suficiente inventario disponible.');
+            }
+        });
+    });
+</script>
+<script>
+    document.querySelectorAll('.boton-pagar').forEach(button => {
+        button.addEventListener('click', function() {
+            const producto = this.closest('.producto');
+            const cantidadSeleccionada = parseInt(producto.querySelector('.cantidad select').value);
+            const inventarioElemento = producto.querySelector('.inventario');
+            let inventarioActual = parseInt(inventarioElemento.dataset.inventario);
+
+            if (cantidadSeleccionada <= inventarioActual) {
+                inventarioActual -= cantidadSeleccionada;
+                inventarioElemento.dataset.inventario = inventarioActual;
+                inventarioElemento.textContent = inventarioActual;
+                alert('Producto añadido al carrito.');
+            } else {
+                alert('No hay suficiente inventario disponible.');
+            }
+        });
+    });
+</script>
+<script>
+    document.getElementById('pagar').addEventListener('click', function() {
+        const total = document.getElementById('total').textContent; // Obtener el total
+
+        // Mostrar el mensaje emergente
+        alert(`Compra realizada con éxito. Su valor fue: $${total}`);
+        
+        // Aquí puedes agregar lógica adicional si es necesario, como vaciar el carrito
+    });
+</script>
+
